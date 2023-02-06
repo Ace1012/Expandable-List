@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.job-types-container {
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  border: 1px solid black;
+  transition: all ease-in-out 150ms;
+}
+.job-types-container > :not(:last-child) {
+  border-bottom: 1px solid black;
+}
+.job-type {
+  width: 100%;
+  max-height: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  text-align: center;
+  background-color: #989898;
+  color: white;
+  overflow-y: hidden;
+  transition: all ease-in-out 150ms;
+}
+.job-type > .job-type {
+  background-color: #555555;
+}
+.job-type > .job-type > .job-type {
+  background-color: #333333;
+}
+.job-type header {
+  cursor: pointer;
+  user-select: none;
+  min-height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+  font-size: 1.5em;
+}
+.arrow {
+  transition: rotate ease-in-out 150ms;
+}
+.open {
+  max-height: 1000em;
+}
+.open > header .arrow {
+  rotate: -180deg;
+}
